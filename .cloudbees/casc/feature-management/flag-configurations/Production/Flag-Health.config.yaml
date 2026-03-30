@@ -2,18 +2,18 @@
 apiVersion: featuremanagement.cloudbees.io/v1alpha1
 kind: flag-configuration
 
-flag: enableTutorialRomain
+flag: Flag-Health
 
 enabled: true
 
 stickinessProperty: rox.distinct_id
 
-defaultValue:
-  valueWrittenInCode: true
+defaultValue: true
 
 conditions:
   - allOf:
-      - anyOf:
-          - group:
-              name: tg-2
+      - not:
+          allOf:
+            - group:
+                name: developers
     flagValue: false

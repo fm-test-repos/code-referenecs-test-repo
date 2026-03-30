@@ -2,13 +2,16 @@
 apiVersion: featuremanagement.cloudbees.io/v1alpha1
 kind: flag-configuration
 
-flag: number-flag
+flag: Flag-Health
 
 enabled: true
 
 stickinessProperty: rox.distinct_id
 
 defaultValue:
-  valueWrittenInCode: true
+  - percentage: 50
+    option: true
+  - percentage: 50
+    option: false
 
 conditions: []

@@ -2,19 +2,14 @@
 apiVersion: featuremanagement.cloudbees.io/v1alpha1
 kind: target-group
 
-name: gregTG
+name: developers
 
 description: 
 
 conditions:
   allOf:
     - property:
-        name: number-prop
-        operator: gte
-        operands:
-            - 245.2
-    - property:
-        name: string-prop
+        name: userId
         operator: in-array
         operands:
-            - asdf
+            - 2134324dffw3213
